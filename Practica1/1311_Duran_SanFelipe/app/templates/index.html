@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title_block %}Página principal{% endblock %}
+
+{% block content %}
+    <header>
+        Página principal
+    </header>
+
+    <div id="content">
+        <! -- No sabemos por qué el carrito no funciona con url_for>
+        <a href="{{ url_for('carrito') }}" class="cesta">Carrito<img class="carrito" src="/static/imagenes/carrito.jpg"></a>
+        
+        <form action="busqueda" method="post">
+            <input name="filtrar" type="text" value="{{ filtrar }}">
+            <select name="categoria">
+                <option value="Accion" {% if categoria == "Accion" %} selected {% endif %}>Acción</option>
+                <option value="Aventura" {% if categoria == "Aventura" %} selected {% endif %}>Aventura</option>
+                <option value="Comedia" {% if categoria == "Comedia" %} selected {% endif %}>Comedia</option>
+                <option value="Drama" {% if categoria == "Drama" %} selected {% endif %}>Drama</option>
+                <option value="Terror" {% if categoria == "Terror" %} selected {% endif %}>Terror</option>
+                <option value="Thriller" {% if categoria == "Thriller" %} selected {% endif %}>Thriller</option>
+            </select>
+            <input type="submit">
+        </form>
+
+        {% for item in movies %}
+             <figure class="movie">
+		<a href="{{url_for('detalles',id=item.id)}}"><img src="{{url_for('static',filename=item.poster)}}"></a>
+                <figcaption>{{ item.titulo }}</figcaption>
+             </figure>
+	{% endfor %}
+
+        {% if movies_filtro != "" %}
+            {% for clave, valor in movies_filtro.items() %}
+                <figure class="movie">
+                    <a href="{{url_for('detalles',id=valor.id)}}"><img src="{{url_for('static',filename=valor.poster)}}"></a>
+                    <figcaption>{{valor.titulo}}</figcaption>
+                </figure>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title_block %}Registro{% endblock %}
+{% block content %}
+    <h1>
+        Regístrate aquí
+    </h1>
+
+        <form id="registro" action="{{ url_for('validacion') }}" onsubmit="return validacion()" method="post">
+            <div class="registro">
+                Nombre de usuario: <div> <input type="text" name="username" id="username" required> </div>
+            </div>
+            <div class="registro">
+                Contraseña: <div> <input type="password" name="password" id="password" placeholder="8 caracteres mínimo" required></div>
+            </div>
+            <div class="registro">
+                Repite la contraseña: <div> <input type="password" name="psw2" id="psw2" required></div>
+            </div>
+            <div class="registro">
+                E-mail: <div> <input type="email" name="email" id="email" required></div>
+            </div>
+            <div class="registro">
+                Nombre: <div> <input type="text" name="firstname" id="firstname" required></div>
+            </div>
+            <div class="registro">
+                Apellidos: <div> <input type="text" name="lastname" id="lastname" required></div>
+            </div>
+            <div class="registro">
+                Edad: <div> <input type="number" min="1" max="99" name="age" id="age" required></div>
+            </div>
+            <div class="registro">
+                Dirección: <div> <input type="text" name="address1" id="address1" required></div>
+            </div>
+            <div class="registro">
+                Dirección 2: <div> <input type="text" name="address2" id="address2"></div>
+            </div>
+            <div class="registro">
+                Ciudad: <div> <input type="text" name="city" id="city" required></div>
+            </div>
+            <div class="registro">
+                Estado: <div> <input type="text" name="state" id="state"></div>
+            </div>
+            <div class="registro">
+                Codigo Postal: <div> <input type="text" name="zip" id="zip"></div>
+            </div>
+            <div class="registro">
+                País: <div> <input type="text" name="country" id="country" required></div>
+            </div>
+            <div class="registro">
+                Región: <div> <input type="text" name="region" id="region" required></div>
+            </div>
+            <div class="registro">
+                Teléfono: <div> <input type="text" name="phone" id="phone" required></div>
+            </div>
+            <div class="registro">
+                Tarjeta de crédito: <div> <input type="number" name="creditcard" id="creditcard" placeholder="16 números" required></div>
+            </div>
+            <div class="registro">
+                Tipo de tarjeta: <div> <input type="text" name="creditcardtype" id="creditcardtype" required></div>
+            </div>
+            <div class="registro">
+                Expiracion de la tarjeta: <div> <input type="month" name="creditcardexpiration" id="creditcardexpiration" required></div>
+            </div>
+            <div class="registro">
+                Género:
+                <div>
+                    <input type="radio" name="gender" value="M"> Hombre
+                    <input type="radio" name="gender" value="F"> Mujer
+                </div>
+            </div>
+            <div class="registro">
+                <input  type="submit" value="Registrarse">
+                <input type="reset" value="Borrar">
+            </div>
+        </form>
+
+{% endblock %}

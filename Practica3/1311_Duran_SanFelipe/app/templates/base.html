@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Sistema de venta online -
+            {% block title_block %}{% endblock %}
+        </title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="{{ url_for('static', filename = 'jquery.js') }}" ></script>
+        <script src="{{ url_for('static', filename = 'registro.js') }}"></script>
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilo.css') }}"/>
+    </head>
+
+    <body>
+          <header>
+            Sistema de venta online
+          </header>
+
+        <div class="contenedorPrincipal">
+
+            <nav>
+                <ul>
+                    {% if username == "" %}
+                        <li><a href="{{ url_for('login') }}">Log In</a></li>
+                        <li><a href="{{ url_for('validacion') }}">Regístrate aqui</a></li>
+                    {% else %}
+                        <li>{{ username.username }}</li>
+                        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                        <li><a href="{{ url_for('usuario') }}">Historial de usuario</a></li>
+					    <li><a href="{{ url_for('topUSA') }}">Top USA</a></li>
+                    {% endif %}
+                </ul>
+
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Catalogo</a></li>
+                </ul>
+
+                <ul>
+                    <li><a><span id="num_usuarios">0 usuarios</span></a></li>
+                </ul>
+
+            </nav>
+
+            <div id="content">
+              {% block content%}
+              {% endblock %}
+              <br><br><br><br><br>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>Tu pagina web de confianza para comprar y alquilar DVDs - Web realizada por Luis Miguel y Adrian para SI</p>
+        </footer>
+
+        {% if error != "" %}
+	    <script>
+	        alert("{{ error }}");
+	    </script>
+	{% endif %}
+
+    </body>
+</html>

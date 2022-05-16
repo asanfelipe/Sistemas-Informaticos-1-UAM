@@ -1,0 +1,225 @@
+body {
+	background-color: #FFB2A2;
+	margin: auto;
+}
+
+header {
+		font: bold 100% monospace;
+		font-size:2.5em;
+		padding:15px;
+		background-color:#FF2D00;
+		text-align:left;
+		color:white;
+  	position: fixed;
+  	top:0;
+		width:100%;
+  	z-index: 1;
+}
+
+nav {
+		width: 120px;
+		position: fixed;
+ 		margin:0;
+		z-index: 2;
+}
+
+footer {
+	font: oblique bold 100% cursive;
+	font-size:1.3em;
+	padding:0px;
+	background-color:#761500;
+	text-align:left;
+	color:white;
+	position:fixed;
+	bottom:0;
+	width:100%;
+}
+
+ul {
+    list-style-type: none;
+	  overflow: hidden;
+    margin: 0 0 5px 0;
+    padding: 0;
+    background-color: #343434;
+}
+
+li ul {
+	display:none;
+}
+
+li:hover ul {
+	position:absolute;
+	display:block;
+	width:auto;
+	border:1px solid white;
+
+}
+
+li:hover ul li {
+	float:none;
+
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #123;
+}
+
+#content {
+	margin:0;
+	width: 100%;
+ 	margin-left: 120px;
+	padding:10px;
+	overflow:auto;
+	background-color: #ea9380;
+}
+
+.contenedorPrincipal {
+  position:relative;
+  top:86px;
+  display: flex;
+  flex-wrap: nowrap;
+
+}
+
+
+figcaption {
+	background-color: black;
+	color: white;
+	font-style: italic;
+	padding: 2px;
+	text-align: center;
+	width:180px;
+}
+
+.movie{
+	float:left;
+	margin-left:auto;
+	text-align:center;
+}
+
+.movie img {
+	width:170px;
+}
+
+.carrito {
+  float: right;
+  background-color: white;
+  text-decoration:none;
+  padding: 5px;
+  border: 1px solid #000000;
+  color:black;
+}
+
+.imgCarro {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.contenedorImagen {
+	display:inline-block;
+	border:1px dashed #000;
+	margin-bottom: 3px ;
+		width:auto;
+}
+
+.contenedorImagen b {
+	display:block;
+	text-align:center;
+}
+
+.contenedorImagen img {
+	width:auto;
+	height:330px;
+}
+
+.contenedorImagen a {
+  text-decoration:none;
+}
+
+.cesta {
+  	float: right;
+  	background-color: white;
+  	text-decoration:none;
+  	color:black;
+  	padding: 5px;
+  	border: 2px solid black;
+  	margin-top:10px;
+}
+
+#fortaleza{
+	border-radius:3px;
+	border: 0px solid #000000;
+}
+
+.corta{
+	background-color:#FF0000;
+	width:50px;
+
+}
+.debil{
+	background-color:orange;
+	width:70px;
+}
+.buena{
+	background-color:#2D98F3;
+	width:90px;
+}
+.fuerte{
+	width:120px;
+	background-color: limegreen;
+}
+
+.remove {
+  	max-width:15%;
+  	float:right;
+  	margin-right:10px;
+  	vertical-align:middle;
+}
+
+.gallery img {
+	width:25%;
+}
+
+#formSaldo {
+	float:right;
+}
+
+#compras {
+  background-color: #a71b1b;
+  border:1px solid #000000;
+  width: 60%;
+  margin: auto;
+  color:white;
+  border-collapse: collapse;
+}
+
+#compras td {
+  border:1px solid #000000;
+  text-align: center;
+  padding: 5px;
+  background-color: #ef4242;
+
+}
+
+#compras th {
+  border:1px solid #000000;
+
+}
+
+#compras td a {
+  text-decoration: none;
+  color: #dbe0f5;
+}
+
+#actor {
+  width:250px;
+}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title_block %}Detalles de {{movies.titulo}}{% endblock %}
+
+{% block content %}
+    <header>
+        Detalles de {{movies.titulo}}
+    </header>
+
+
+    <div id="content">
+        <a href="{{ url_for('carrito') }}" class="cesta">Carrito<img class="carrito" src="/static/imagenes/carrito.jpg"></a>
+   
+        <div class="gallery">
+            <img src="{{url_for('static', filename=movies.poster)}}" alt="poster">
+            <h2>{{movies.titulo}}</h2>
+            <p>
+            <strong>Director:</strong> {{movies.director}}
+            <p>
+            <strong>Precio:</strong> {{movies.precio}}
+            <p>
+            <strong>Categoria:</strong> {{movies.categoria}}
+            <p>
+	    <strong>Actor:</strong> {{movies.actores.nombre}}
+            <p>
+	    <pre>       <strong>Personaje:</strong> {{movies.actores.personaje}}</pre>
+            <p>
+	    <pre>       <strong>Imagen:</strong> <img id=actor src="{{url_for('static', filename=movies.actores.foto)}}" alt="imagen"></pre>
+            <p>
+            <button class="button button2">Añadir al carrito</button>
+	</div>
+    </div>
+{% endblock %}

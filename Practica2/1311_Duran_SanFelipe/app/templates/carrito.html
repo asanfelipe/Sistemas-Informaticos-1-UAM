@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title_block %}Carrito{% endblock %}
+
+{% block content %}
+
+    Carrito<a href="{{ url_for('carrito') }}" class="carrito">Carrito<img class="imgCarro" src="{{url_for('static', filename='carrito.png')}}"/></a>
+
+
+	<div class="item">
+		<div class="carro-item">
+			Nombre
+		</div>
+		<div class="carro-cantidad">
+			Cantidad
+		</div>
+		<div class="carro-precio">
+			Precio
+		</div>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,95 @@
+<!DOCTYPE html> 
+<!--- ... comment ... --> 
+<html lang="es">
+    
+<head> 
+<meta charset="UTF-8"> 
+  <link rel="stylesheet" href="ejemplo.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <script src='ejemplo.js'></script>
+  <title>el título</title> 
+</head>
+
+<body>
+    
+<h1>encabezamiento principal</h1>
+<h2>otro encabezamiento</h2>
+
+<p>un párrafo</p>
+
+<ul> 
+  <li>un ítem de lista</li> 
+  <li>otro ítem</li>
+</ul>
+
+<ol>  
+  <li>un ítem de lista ordenada</li>
+  <li>otro</li>
+</ol>
+ 
+Texto <b>en negrita</b>, <i>itálica</i>, <pre>tal cual</pre> ...
+
+<p>
+Un<br/>salto de línea
+</p>
+
+Un <div class="bloque">bloque de texto</div> aparte
+
+<p>
+Un <span>bloque de texto</span> embebido
+</p>
+
+Una tabla 
+<table> 
+  <tr>  
+    <th>cabecera de columna</th> 
+    <th>otra cabecera</th> 
+  </tr> 
+  <tr> 
+    <td>un elemento</td> 
+    <td>otro elemento</td> 
+  </tr> 
+</table>
+
+<div class="bloque">
+Una imagen
+  <img src="http://www.uam.es/EPS/imagen/1242659838616/logo2.jpg" alt="logo UAM"/>
+</div>
+
+<div>
+  <a href="https://www.uam.es">un enlace</a>
+</div>
+
+<div>
+Un formulario
+    <form action="ejemplo.html" onSubmit="return check_name()"> 
+      <label>texto (prueba con root)</label> 
+      <input id="thename" type="text"/>
+      <p id="tip_name"></p>
+      <br/>
+      <label>password</label> 
+      <input type="password"/>
+      <br/>
+      <label>número</label> 
+      <input type="number"/>
+      <br/>
+      <label>selección múltiple</label> 
+      <input type="checkbox"/>un tic
+      <input type="checkbox"/>otro tic
+      <br/>
+      <label>selección única</label> 
+      <input type="radio" name="grupo de radio buttons"/>uno ...
+      <input type="radio" name="grupo de radio buttons"/>u otro
+      <br/>
+      <label>desplegable</label>
+      <select> 
+          <option>un ítem</option> 
+          <option>otro ítem</option> 
+      </select> 
+      <br/>
+      <input id="botonenvio" type="submit" value="OK"> 
+    </form>
+</div>
+
+</body> 
+</html> 

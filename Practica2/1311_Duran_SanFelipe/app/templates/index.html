@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title_block %}Página principal{% endblock %}
+
+{% block content %}
+
+
+        <a href="{{ url_for('carrito') }}" class="carrito">Carrito<img class="imgCarro" src="{{url_for('static', filename='carrito.png')}}"/></a>
+
+        <form action="busqueda" method="post">
+            <input name="filtrar" type="text" value="{{ filtrar }}">
+            <input type="submit">
+        </form>
+        <br>
+
+        <table id="compras">
+            <tr>
+			    <th> AÑO </th>
+				<th> PELICULA </th>
+				<th> VENTAS</th>
+			</tr>
+
+            {% if topventas %}
+                {% for value in topventas %}
+                    <tr>
+                        <td> {{ value[0] }} </td>
+                        <td> {{ value[1] }} </td>
+                        <td> {{ value[2] }} </td>
+                    </tr>
+                {% endfor %}
+            {% endif %}
+
+        </table>
+        <br>
+
+        {% for item in movies %}
+		    <a href="{{url_for('detalles',id=item[0])}}">
+                <div class="contenedorImagen">
+                    <img src="{{url_for('static', filename='dvd.jpg')}}"/>
+                    <b>{{ item[1] }}</b>
+                </div>
+            </a>
+	    {% endfor %}
+
+        {% if movies_filtro != "[]" %}
+            {% for item in movies_filtro %}
+                <a href="{{url_for('detalles',id=item[0])}}">
+                    <div class="contenedorImagen">
+                        <img src="{{url_for('static', filename='dvd.jpg')}}"/>
+                        <b>{{ item[1] }}</b>
+                    </div>
+                </a>
+            {% endfor %}
+        {% endif %}
+
+{% endblock %}

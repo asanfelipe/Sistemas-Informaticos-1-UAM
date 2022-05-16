@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title_block %}Registro{% endblock %}
+{% block content %}
+    <header>
+        Regístrate aquí
+    </header>
+
+    <div id="content">
+        <form id="registro" action="{{ url_for('validacion') }}" onsubmit="return validacion()" method="post">
+            <div class="registro">
+                Nombre de usuario: <div> <input type="text" name="name" id="name" required> </div>
+            </div>
+            <div class="registro">
+                Contraseña: <div> <input type="password" name="psw" id="psw" placeholder="8 caracteres mínimo" required></div>
+            </div>
+            <div class="registro">
+                Repite la contraseña: <div> <input type="password" name="psw2" id="psw2" required></div>
+            <div class="registro">
+                Fortaleza de Contraseña: <div id="fortaleza" class="corta">Corta</div>
+            </div>
+            </div>
+            <div class="registro">
+                E-mail: <div> <input type="email" name="email" id="email" required></div>
+            </div>
+            <div class="registro">
+                Tarjeta de crédito: <div> <input type="text" name="card" id="card" placeholder="16 números" required></div>
+            </div>
+            <div class="registro">
+                Edad: <div> <input type="number" min="1" max="99" name="edad" id="edad" required></div>
+            </div>
+            <p>
+            <div class="registro">
+                Género:
+                <div>
+                    <input type="radio" name="genero" value="Hombre"> Hombre
+                    <input type="radio" name="genero" value="Mujer"> Mujer
+                    <input type="radio" name="genero" value="Otro"> Prefiero no decirlo
+                </div>
+            </div>
+            <p>
+            <div class="registro">
+                ¿Recomendarias esta pagina web? 
+                <div> <select name="Recomendar">
+                    <option value="nada">Nada</option>
+                    <option value="poco">Poco</option>
+                    <option value="normal">Normal</option>
+                    <option value="mucho" selected>Mucho</option>
+                </select></div>
+            </div>
+            <p>
+            <div class="registro">
+                Genero preferido:
+                <div>
+                    <input type="checkbox" name="Genero" value="Accion">Accion
+                    <input type="checkbox" name="Genero" value="Aventura">Aventura
+                    <input type="checkbox" name="Genero" value="Comedia">Comedia
+                    <input type="checkbox" name="Genero" value="Drama">Drama
+                    <input type="checkbox" name="Genero" value="Terror">Terror
+                    <input type="checkbox" name="Genero" value="Thriller">Thriller
+                </div>
+            </div>
+            <p>
+            <div class="registro">
+                <input  type="submit" value="Registrarse">
+                <input type="reset" value="Borrar">
+            </div>
+        </form>
+    </div>
+{% endblock %}

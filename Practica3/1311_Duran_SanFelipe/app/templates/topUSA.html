@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block title_block %}Top USA{% endblock %}
+
+{% block content %}
+
+
+        <a href="{{ url_for('carrito') }}" class="carrito">Carrito<img class="imgCarro" src="{{url_for('static', filename='carrito.png')}}"/></a>
+
+        <br>
+        
+        <h1>Tabla Life</h1>
+        <table id="compras">
+            <tr>
+                <th> TITLE </th>
+                    {% for value in life_title %}
+                        <td> {{ value }} </td>
+                    {% endfor %}
+	    </tr>
+            <tr>
+                <th> GENRES </th>
+                {% for value in life_genres %}
+                        <td> {{ value }} </td>
+                    {% endfor %}
+	    </tr>
+            <tr>
+                <th> YEAR </th>
+                {% for value in life_year %}
+                        <td> {{ value }} </td>
+                    {% endfor %}
+	    </tr>
+            <tr>
+                <th> ACTORS </th>
+                {% for value in life_actors %}
+                        <td> {{ value }} </td>
+                    {% endfor %}
+	    </tr>
+            <tr>
+                <th> DIRECTORS </th>
+                {% for value in life_directors %}
+                        <td> {{ value }} </td>
+                    {% endfor %}
+	    </tr>
+        </table>
+
+        <h1>Tabla Woody Allen</h1>
+        <table id="compras">
+            <tr>
+                <th> TITLE </th>
+                    {% for value in Allen_title %}
+                        <td> {{ value }} </td>
+                    {% endfor %}
+	    </tr>
+            <tr>
+                <th> GENRES </th>
+                {% for value in Allen_genres %}
+                        <td> {{ value }} </td>
+                    {% endfor %}
+	    </tr>
+            <tr>
+                <th> YEAR </th>
+                {% for value in Allen_year %}
+                        <td> {{ value }} </td>
+                    {% endfor %}
+	    </tr>
+            <tr>
+                <th> ACTORS </th>
+                {% for value in Allen_actors %}
+                        <td> {{ value }} </td>
+                    {% endfor %}
+	    </tr>
+            <tr>
+                <th> DIRECTORS </th>
+                {% for value in Allen_directors %}
+                        <td> {{ value }} </td>
+                    {% endfor %}
+	    </tr>
+        </table>
+
+        <h1>Tabla Parsons Gallecki</h1>
+        <table id="compras">
+            <tr>
+                <th> TITLE </th>
+                    {% for value in pg_title %}
+                        <td> {{ value }} </td>
+                    {% endfor %}
+	    </tr>
+            <tr>
+                <th> GENRES </th>
+                {% for value in pg_genres %}
+                        <td> {{ value }} </td>
+                    {% endfor %}
+	    </tr>
+            <tr>
+                <th> YEAR </th>
+                {% for value in pg_year %}
+                        <td> {{ value }} </td>
+                    {% endfor %}
+	    </tr>
+            <tr>
+                <th> ACTORS </th>
+                {% for value in pg_actors %}
+                        <td> {{ value }} </td>
+                    {% endfor %}
+	    </tr>
+            <tr>
+                <th> DIRECTORS </th>
+                {% for value in pg_directors %}
+                        <td> {{ value }} </td>
+                    {% endfor %}
+	    </tr>
+        </table>
+
+        <br>
+
+{% endblock %}

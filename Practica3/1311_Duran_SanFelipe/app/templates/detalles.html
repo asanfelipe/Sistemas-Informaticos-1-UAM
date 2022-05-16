@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title_block %}Detalles{% endblock %}
+
+{% block content %}
+
+
+        <a href="{{ url_for('carrito') }}" class="carrito">Carrito<img class="imgCarro" src="{{url_for('static', filename='carrito.png')}}"/></a>
+
+        <div class="gallery">
+            <h2>Título: {{movies[1]}}</h2>
+            <p>
+            <strong>Fecha de estreno: </strong> {{movies[2]}}
+            <p>
+            <strong>Precio: </strong> {{movies[3]}}€
+            <p>
+            <button class="button button2">Añadir al carrito</button>
+	    </div>
+
+{% endblock %}

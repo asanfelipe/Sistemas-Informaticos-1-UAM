@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title_block %}Iniciar Sesión{% endblock %}
+
+{% block content %}
+    <h1>
+        Iniciar Sesión
+    </h1>
+
+        <form id="registro" action="{{ url_for('login') }}" method="post">
+            <div class="registro">
+                Nombre de usuario: <div> <input type="text" name="name" value="{% if username_cookie != None %} {{ username_cookie }} {% endif %}"></div>
+            </div>
+
+            <div class="registro">
+                Contraseña: <div> <input type="password" name="password"></div>
+            </div>
+            <p>
+            <div class="registro">
+                <input  type="submit" value="Log In">
+            </div>
+
+        </form>
+
+{% endblock %}

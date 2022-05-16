@@ -1,0 +1,9 @@
+Práctica 2 de Sistemas Informáticos - Grupo 1311 - Pareja 4
+
+INTEGRANTES:
+	Adrián San Felipe Martín
+	Luis Miguel Durán Díaz
+
+
+Tenemos un makefile sencillo con el cual resetear la DB,
+entrar en la DB y ejecutar la página web

@@ -1,0 +1,187 @@
+body {
+	background-color: #FFB2A2;
+	margin: auto;
+	margin-bottom:1000px;
+}
+
+header {
+	font: bold 100% monospace;
+	font-size:2.5em;
+	padding:15px;
+	background-color:#FF2D00;
+	text-align:left;
+	color:white;
+  	position: fixed;
+  	top:0;
+	width:100%;
+  	z-index: 1;
+}
+
+nav {
+  	width: 100px;
+	position: fixed;
+ 	margin:0;
+}
+
+footer {
+	font: oblique bold 100% cursive;
+	font-size:1.3em;
+	padding:0px;
+	background-color:#761500;
+	text-align:left;
+	color:white;
+	position:fixed;
+	bottom:0;
+	width:100%;
+}
+
+
+li  {
+   	display: block;
+	color: white;
+    	background-color: #B7B2B1;
+   	text-align: center;
+    	padding: 14px 16px;
+    	text-decoration: none;
+}
+
+ul {
+    	list-style-type: none;
+	overflow: hidden;
+    	margin: 0 0 5px 0;
+    	padding: 0;
+    	background-color: #343434;
+}
+
+li ul {
+	display:none;
+}
+
+li:hover ul {
+	position:absolute;
+	display:block;
+	width:auto;
+	border:1px solid white;
+}
+
+li:hover ul li {
+	float:none;
+}
+
+li:hover {
+    	background-color: #123;
+}
+
+#content {
+	margin-top: 60px;
+ 	margin-left: 100px;
+	background-color: #FFB2A2;
+	padding:10px;
+	font-family: georgia;
+}
+
+.contenedor {
+  	position:relative;
+  	top:86px;
+  	display: flex;
+  	flex-wrap: nowrap;
+}
+
+figcaption {
+	background-color: black;
+	color: white;
+	font-style: italic;
+	padding: 2px;
+	text-align: center;
+	width:180px;
+}
+
+.movie{
+	float:left;
+	margin-left:auto;
+	text-align:center;
+}
+
+.movie img {
+	width:170px;
+}
+
+.carrito {
+  	width: 20px;
+  	height: 20px;
+  	vertical-align: middle;
+}
+
+.cesta {
+  	float: right;
+  	background-color: white;
+  	text-decoration:none;
+  	color:black;
+  	padding: 5px;
+  	border: 2px solid black;
+  	margin-top:10px;
+}
+
+#fortaleza{
+	border-radius:3px;
+	border: 0px solid #000000;
+}
+
+.corta{
+	background-color:#FF0000;
+	width:50px;
+
+}
+.debil{
+	background-color:orange;
+	width:70px;
+}
+.buena{
+	background-color:#2D98F3;
+	width:90px;
+}
+.fuerte{
+	width:120px;
+	background-color: limegreen;
+}
+
+.remove {
+  	max-width:15%;
+  	float:right;
+  	margin-right:10px;
+  	vertical-align:middle;
+}
+
+.gallery img {
+	width:25%;
+}
+
+#formSaldo {
+	float:right;
+}
+
+#compras {
+  background-color: #a71b1b;
+  border:1px solid #b96e11;
+  width: 60%;
+  margin: auto;
+  float:right;
+  color:white;
+  border-collapse: collapse;
+}
+
+#compras td {
+  border:1px solid #ff0000;
+  text-align: center;
+  padding: 5px;
+
+}
+
+#compras td a {
+  text-decoration: none;
+  color: #dbe0f5;
+}
+
+#actor {
+  width:250px;
+}

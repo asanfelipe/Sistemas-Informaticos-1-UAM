@@ -1,0 +1,145 @@
+{ "peliculas":
+  [
+    {
+	  "id": 1,
+	  "titulo": "Harry Potter y la piedra filosofal",
+      "poster": "../static/imagenes/harry.jpg",
+      "director": "Chris Columbus",
+      "precio": 15,
+      "categoria": "Aventura",
+      "año": 2001,
+      "actores":
+      {
+          "nombre": "Daniel Radcliffe",
+          "personaje": "Harry Potter",
+          "foto": "../static/imagenes/hp.jpg"
+      }
+    },
+    {
+	  "id": 2,
+	  "titulo": "Expediente warren, el conjuro",
+      "poster": "../static/imagenes/warren.jpg",
+      "director": "James Wan",
+      "precio": 10,
+      "categoria": "Terror",
+      "año": 2010,
+      "actores":
+      {
+          "nombre": "Patrick Wilson",
+          "personaje": "Ed Warren",
+          "foto": "../static/imagenes/ed.jpg"
+      }
+    },
+   {
+	  "id": 3,
+	  "titulo": "Los Vengadores",
+      "poster": "../static/imagenes/vengadores.jpg",
+      "director": "Joss Whedon",
+      "precio": 20,
+      "categoria": "Aventura",
+      "año": 2009,
+      "actores":
+      {
+          "nombre": "Robert Downey Jr.",
+          "personaje": "Tony Stark / Iron Man",
+          "foto": "../static/imagenes/rdj.jpg"
+      }
+    },
+     {
+ 	   "id": 4,
+ 	   "titulo": "Pinocho",
+       "poster": "../static/imagenes/pinocho.jpg",
+       "director": "Matteo Garrone",
+       "precio": 15,
+       "categoria": "Aventura",
+       "año": 2020,
+       "actores":
+       {
+           "nombre": "Roberto Benigni",
+           "personaje": "Gepetto",
+           "foto": "../static/imagenes/roberto_benigni.jpg"
+         
+       }
+     },
+      {
+        	"id": 5,
+        	"titulo": "Tenet",
+        "poster": "../static/imagenes/tenet.jpg",
+        "director": "Christopher Nolan",
+        "precio": 25,
+        "categoria": "Accion",
+        "año": 2020,
+        "actores":
+        {
+            "nombre": "Robert Pattinson",
+            "personaje": "Neil",
+            "foto": "../static/imagenes/robert_pattinson.jpg"
+          
+        }
+      },
+      {
+        	"id": 6,
+        	"titulo": "The Vigil",
+        "poster": "../static/imagenes/the_vigil.jpg",
+        "director": "Keith Thomas",
+        "precio": 10,
+        "categoria": "Terror",
+        "año": 2020,
+        "actores":
+        {
+            "nombre": "Menashe Lustig",
+            "personaje": "Reb Shulem",
+            "foto": "../static/imagenes/menage_lustig.jpg"
+          
+        }
+      },
+	  {
+        	"id": 7,
+        	"titulo": "Harry Potter y el prisionero de Azkaban",
+        "poster": "../static/imagenes/hp3.jpg",
+        "director": "Alfonso Cuaron",
+        "precio": 14,
+        "categoria": "Aventura",
+        "año": 2015,
+        "actores":
+        {
+            "nombre": "Gary Oldman",
+            "personaje": "Sirius Black",
+            "foto": "../static/imagenes/gary.jpg"
+          
+        }
+      },
+	  	  {
+        	"id": 8,
+        	"titulo": "Los Vengadores-La Era de Ultron",
+        "poster": "../static/imagenes/lv2.jpg",
+        "director": "Joss Whedon",
+        "precio": 34,
+        "categoria": "Aventura",
+        "año": 2009,
+        "actores":
+        {
+            "nombre": "Chris Evans",
+            "personaje": "Capitan America/Steve Rogers",
+            "foto": "../static/imagenes/capi.jpg"
+          
+        }
+      },
+	  	  	  {
+        	"id": 9,
+        	"titulo": "Los Vengadores-Infinity War",
+        "poster": "../static/imagenes/lv3.jpg",
+        "director": "Joss Whedon",
+        "precio": 15,
+        "categoria": "Aventura",
+        "año": 2018,
+        "actores":
+        {
+            "nombre": "Josh Brolin",
+            "personaje": "Thanos",
+            "foto": "../static/imagenes/jb.jpg"
+          
+        }
+      }
+  ]
+}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title_block %}Historial de {{username.username}}{% endblock %}
+
+{% block content %}
+    <header>
+        Historial de {{username.username}}
+    </header>
+
+    <div  id="content">
+        <a href="{{ url_for('carrito') }}" class="cesta">Carrito<img class="carrito" src="static/imagenes/carrito.jpg"></a>
+    </div>
+			
+    <form action="{{url_for('usuario')}}" method="post" id="formSaldo" >		
+        <input type="text" name="n_saldo" placeholder="Cambiar saldo: "><input type="submit" value="Aceptar">		
+    </form>
+			
+    <table id="compras">
+        <tr>
+	    <th> Fecha </th>
+	    <th> Importe </th>
+            <th> Detalles</th>
+        </tr>
+    </table>
+
+{% endblock %}
